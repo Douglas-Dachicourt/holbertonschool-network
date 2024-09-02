@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 #script that pings an IP address passed as an argument
-export DEFAULT_PING="8.8.8.8"
 
 if [ -z "$1" ];
 then
-TARGET=$DEFAULT_PING
+echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
 TARGET=$1
 fi
 
-ping -c 5 $TARGET
+ping -c 5 "$TARGET"
